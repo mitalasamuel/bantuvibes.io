@@ -4,8 +4,8 @@
 
 :root {
     --main-color: #8e44ad;
-    --black: rgb(192, 24, 24);
-    --white: #fff;
+    --black: rgb(34, 30, 30);
+    --white: rgba(250, 246, 246, 0.747);
     --light-black: rgb(179, 175, 175);
     --light-white: rgba(235, 227, 227, 0.723);
     --dark-bg: rgba(237, 234, 234, 0.599);
@@ -74,12 +74,7 @@ textarea {
 }
 
 a {
-    -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-    -webkit-transition: color 0.2s ease-in-out,
-        border-bottom-color 0.2s ease-in-out;
-    -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-    transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-    color: inherit;
+     color: inherit;
     text-decoration: none;
 }
 
@@ -388,10 +383,9 @@ footer a {
     text-decoration: none;
     color: #CCCCCC;
 }
-
+hr{font-size: 1px;border: .01rem solid rgb(170, 150, 150);}
 .events a {
     margin-bottom: 2rem;
-    border-bottom: .1rem solid var(--white);
 }
 
 .events a:nth-last-child(1) {
@@ -436,7 +430,6 @@ th {
     justify-content: center;
     padding: 1px;
     width: 20%;
-    border-bottom: .1rem solid #ccc;
     text-align: left;
 }
 
@@ -475,7 +468,6 @@ th {
     justify-content: center;
     padding: 1px;
     width: 0%;
-    border-bottom: .1rem solid #ccc;
     text-align: left;
 }
     .album {
@@ -494,6 +486,11 @@ th {
     .content,
     .footer {
         padding: 1.2rem;
+    }.contacts {
+        font-family: 'Poppins',
+            sans-serif;
+        overflow: hidden;
+        height: 100%;
     }
 }
 
@@ -529,7 +526,6 @@ th {
     border-radius: .5rem;
     padding: 2rem;
     margin: 0 auto;
-    max-width: 50rem;
 }
 
 .contact p {
@@ -605,6 +601,7 @@ th {
         width: 20rem;
         height: 100%;
     }
+
 .frame{height: 100%;}
     .frame img {
         width: 100%;
@@ -620,7 +617,6 @@ th {
 }
 
 .footer .box-container {
-    border-bottom: 1px solid var(--white);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 3rem;
