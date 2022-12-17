@@ -3,17 +3,11 @@
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 
 :root {
-    --main-color: #8e44ad;
-    --black: rgb(34, 30, 30);
     --white: rgba(250, 246, 246, 0.747);
     --light-black: rgb(179, 175, 175);
     --light-white: rgba(235, 227, 227, 0.723);
     --dark-bg: rgba(237, 234, 234, 0.599);
-    --light-bg: white;
-    --border: .1rem solid var(--black);
-    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    --text-shadow: 0 1.5rem 3rem rgba(0, 0, 0, .3);
-}
+--bg:black;}
 
 * {
     font-family: 'Poppins', sans-serif;
@@ -38,297 +32,8 @@ textarea {
     letter-spacing: 0.025em;
     line-height: 1.65;
 }
+body{background-color: var(--bg);}
 
-
-@media screen and (max-width: 1680px) {
-
-    body,
-    input,
-    select,
-    textarea {
-        font-size: 14pt;
-    }
-}
-
-@media screen and (max-width: 1280px) {
-
-    body,
-    input,
-    select,
-    textarea {
-        font-size: 12pt;
-    }
-
-
-}
-
-@media screen and (max-width: 360px) {
-
-    body,
-    input,
-    select,
-    textarea {
-        font-size: 11pt;
-    }
-
-}
-
-a {
-     color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    border-bottom-color: transparent;
-    color: #9bf1ff !important;
-}
-
-a:active {
-    color: #53e3fb !important;
-}
-
-strong,
-b {
-    color: #ffffff;
-    font-weight: 600;
-}
-
-em,
-i {
-    font-style: italic;
-}
-
-p {
-    margin: 0 0 2em 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #ffffff;
-    font-weight: 600;
-    line-height: 1.65;
-    margin: 0 0 1em 0;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-    color: inherit;
-    border-bottom: 0;
-}
-
-h1 {
-    font-size: 2.5em;
-}
-
-h2 {
-    font-size: 1.75em;
-}
-
-h3 {
-    font-size: 1.35em;
-}
-
-h4 {
-    font-size: 1.1em;
-}
-
-h5 {
-    font-size: 0.9em;
-}
-
-h6 {
-    font-size: 0.7em;
-}
-
-@media screen and (max-width: 736px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    .reverse {
-        display: flex;
-        flex-wrap: wrap-reverse;
-    }
-
-    .content,
-    .footer {
-        padding: 1.2rem;
-    }
-
-    h2 {
-        font-size: 1.5em;
-    }
-
-    h3 {
-        font-size: 1.25em;
-    }
-}
-
-html {
-    font-size: 62.5%;
-    overflow-x: hidden;
-}
-
-body {
-    background: #0e0207;
-    overflow: hidden;
-}
-
-.browse {
-    display: flex;
-}
-
-.browse li img {
-    width: 10px;
-}
-
-.button {
-    background-color: var(--light-bg);
-    padding: 5px 20px;
-    text-align: center;
-    margin: 0 20px;
-}
-.youtube_container{
-    height: 100vh;justify-content: center;align-items: center;display: flex;}
-
-.flex-items,
-.reverse {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-ul {
-    font-weight: 800;
-    display: flex;
-    justify-content: space-between;
-}
-
-.left,
-.right {
-    width: 50%;
-    padding: 0 2rem;
-}
-
-.right ul li {
-    font-weight: 700;
-}
-
-.about,
-.projects {
-    overflow: hidden;
-    /* margin: 2rem 0 0 0; */
-
-}
-
-.track_section {
-    margin: 0 2rem;
-    background-color: var(--black);
-}
-
-.track_content p {
-    padding: 1rem;
-}
-
-.content,
-.footer {
-    padding: 8rem;
-}
-
-td img {
-    width: 25px;
-}
-.work,
-.about,
-.projects,
-.songs {margin: 1rem 4rem;
-     height: 100%;
-}
-
-.flyers {
-    width: 100%;
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-.flyers img {
-    width: 40rem;
-    height: 100%;
-    margin-bottom: -10rem;
-    /* opacity: .6; */
-}
-
-.frame {
-    height: 700px;
-    overflow: hidden;
-    margin: 0 0 2rem;
-}
-
-.frame img {
-    width: 100%;
-    margin-top: -4rem;
-}
-
-
-.lets {
-    width: 100%;
-}
-
-.bantu-vibe {
-    padding-top: 20px;
-    margin-bottom: 4rem;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-}
-
-.album {
-    display: flex;
-    justify-content: center;
-}
-
-.album-vibe img {
-    width: 20rem;
-}
-
-.bantu-vibe img {
-    width: 9em;
-    text-align: center;
-    justify-content: center;
-}
-
-.vibe {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: 7rem;
-    padding-left: 3rem;
-    align-items: center;
-}
-
-.vibe .fab {
-    font-size: 24px;
-    color: var(--white);
-}
-
-.rwa {
-    height: 2rem;
-    width: .5rem;
-}
-
-.vibe img {
-    width: 20rem;
-}
 
 /* Home designs with the cool bantu vibes */
 .home {
@@ -336,88 +41,79 @@ td img {
 }
 
 .home .flex-items {
-    flex-wrap: wrap-reverse;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .home-body {
-    height: 100vh;
-    width: 100%;
+    margin:0 0 9rem 0; width: 100%;height: 100vh;
     padding: 3rem;
     background-image: url(assets/Frame\ 7.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+}.home .right{display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
-
-.home .image img {
-    width: 100%;
+.right ul{display: flex;
+justify-content: space-between;align-items: center;}
+.right ul li{margin: 1rem;}
+.home .image  {
+    width: 50%;height: 600px;
+}.home .image img {
+    height: 100%;
 }
+.cx img{width: 70%;}
+.cx {width: 100%;align-items: center;display: flex;justify-content: center;}
 
 .link li {
     font-weight: bolder;
     list-style: none;
 }
-
 .link a {
     width: 3rem;
-    margin: .2rem;
+    margin: 2rem;
 }
-
-.home .flex-items .right .cx img {
-    margin-top: -30rem;
+.flyers{display: none; width: 100%;margin-top: 0; height: 30vh;}
+/* .flyers img{} */
+.youtube_container{height: 90vh;display: flex;justify-content: center;align-items: center;
+width: 100%;margin: 9rem 0;
 }
+/* --------------------about-------------------- */
+.about{background-color: var(--bg);padding: 3rem;height: 110vh;overflow: hidden;margin:9rem 0;}
+.about .flex-items{display: flex;justify-content: space-between;}
+.about .flex-items .left{width: 50%;padding: 0 3rem 0 0;}
+.about .flex-items p{ font-size: 18px;line-height: 1.4;padding: 1rem 0 0 0;}
+.frame{height: 400px;overflow: hidden;margin: 2.5rem 0 0 0;}
+.about .frame_about {overflow: hidden; height: 330px; width: 100%;}
+.about .frame_about1 {overflow: hidden; height: 330px;margin: 1rem 0 0 0; width: 100%;}
+.frame img,.frame_about img,.frame_about1 img{width: 100%;}
+/* --------------------music-------------------- */
+.work{background-color: var(--bg); padding: 3rem;height: 100vh;overflow: hidden;margin:9rem 0;}
+.work .work_reverse{display: flex;justify-content: space-between;}
+.work_reverse .left{width: 100%;margin: 0 3rem 0 0;}
+.work p{ font-size: 18px;line-height: 1.4;padding: 1rem 0 0 0;}
+.work_reverse .right .frame_side img{width: 100%;}
+.work .left .frame_work img{width: 100%;}
+/* albums */
+.projects,.songs,.Ideas{background-color: var(--bg); padding: 3rem;overflow: hidden;margin:9rem 0;}
+.projects .flex-items{display: flex;width: 100%;}
+.projects .flex-items img{display: flex;width: 100%;}
+/* ------------------.Ideas------------------ */
 
-/* Projects done by the bantu vibes */
-.flex-items li img {
-    width: 100%;
-}
-
-.projects .flex-items {
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-/* footer designs for the vibe */
-
-footer a {
-    text-decoration: none;
-    color: #CCCCCC;
-}
-hr{font-size: 1px;border: .01rem solid rgb(170, 150, 150);}
-.events a {
-    margin-bottom: 2rem;
-}
-
-.events a:nth-last-child(1) {
-    border-bottom: none;
-}
-
-.flex-footer {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    width: 50%;
-}
-
-.footer-right .link img {
-    width: 25px;
-}
-
+.Ideas img{width: 200px;}
 table {
     text-align: center;
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 10rem;
 }
 
-
-/* Zebra striping */
 tr:nth-of-type(odd) {
     color: var(--white);
-    /* background: var(--main-color); */
 }
 
 th {
@@ -435,186 +131,12 @@ th {
     width: 20%;
     text-align: left;
 }
-
-/* landscape and portrait controlers */
-@media (max-width:398px) {
-    .vibe img {
-        width: 10rem;
-    }
-
-    .content,
-    .footer {
-        padding: 1.2rem;
-    }
-}
-
-.nav {
-    padding: 20px;
-}
-
-@media (max-width:698px) {
-    .nav {
-        padding: 1rem;
-    }
-
-    .button {
-        padding: 5px 10px;
-        margin: 0 10px;
-    }
-
-    .button img {
-        width: 9rem;
-    }
-td,
-th {
-    text-align: center;
-    justify-content: center;
-    padding: 1px;
-    width: 0%;
-    text-align: left;
-}
-    .album {
-        margin-bottom: 4rem;
-    }
-
-    .album img {
-        width: 25rem;
-    }
-
-
-    .vibe img {
-        width: 10rem;
-    }
-
-    .content,
-    .footer {
-        padding: 1.2rem;
-    }.contacts {
-        font-family: 'Poppins',
-            sans-serif;
-        overflow: hidden;
-        height: 100%;
-    }
-}
-
-.contacts {
-    font-family: 'Poppins',
-        sans-serif;
-    overflow: hidden;
-    height: 80vh;
-}
-
-.contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-}
-
-.contact_image {
-    z-index: -2;
-    width: 40%;
-
-}
-
-.contact img {
-    width: 100%;
-    z-index: -2;
-
-}
-
-.contact form {
-    border-radius: .5rem;
-    padding: 2rem;
-    margin: 0 auto;
-}
-
-.contact p {
-    padding: 1rem 0;
-    font-size: 1.4rem;
-    color: var(--light-color);
-    line-height: 2;
-}
-
-.contact form .input {
-    border-top: var(--border);
-    margin-bottom: 2rem;
-    border-radius: .5rem;
-    background-color: var(--light-bg);
-    padding: .7rem;
-    font-size: 1.4rem;
-    color: var(--black);
-    text-align: center;
-    width: 100%;
-}
-
-.contact form .input1 {
-    border-top: var(--border);
-    margin-bottom: 2rem;
-    border-radius: .5rem;
-    background-color: var(--light-bg);
-    padding: 1rem;
-    font-size: 1.4rem;
-    color: var(--black);
-    text-align: center;
-    width: 100%;
-}
-
-.contact form span {
-    font-size: 1.7rem;
-    color: var(--black);
-}
-
-@media (max-width:798px) {
-    .home .flex-items .right .cx img {
-        margin-top: 0rem;
-        position: relative;
-        width: 100%;
-    }
-
-    .left,
-    .right {
-        width: 100%;
-        padding: 0;
-    }
-
-    .flex-items {
-        flex-wrap: wrap;
-    }
-
-
-    /* .kohen {
-        display: none;
-    } */
-
-    .work,
-    .about,
-    .projects,
-    .songs {
-        display: flex;
-         height: 100%;
-    }
-
-    .flyers img {
-        width: 20rem;
-        height: 100%;
-    }
-
-.frame{height: 100%;}
-    .frame img {
-        width: 100%;
-        margin-top: 0rem;
-    }
-}
-
-.footer {
-    /* line-height: .5; */
-    /* background: url(../images/footer-bg.jpg) no-repeat; */
-    background-size: cover;
-    background-position: center;
-}
-
+/* -----------------footer----------------- */
+.footer{padding: 3rem;height: 100%;overflow: hidden;margin:9rem 0;}
+.footer .flex_items{display: flex;margin: 0 0 3rem 0;justify-content: space-between;}
+.footer_right ul{display: flex;}
+.footer .flex_items .footer_right{width: 40%;display: block;}
+.flex_logo{display: flex;width: 220px;align-items: center;justify-content: center;}
 .footer .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -652,4 +174,92 @@ th {
 
 .footer .credit span {
     color: var(--main-color);
+}.vibe .fab {
+    font-size: 24px;
+    color: var(--white);
+}.footer .box-container .box a i {
+    color: var(--main-color);
+    padding-right: 0.5rem;
+    transition: .2s linear;
+}.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+@media screen and (max-width: 1680px) {
+
+    body,
+    input,
+    select,
+    textarea {
+        font-size: 14pt;
+    }.home .image {width: 100%;}
+}
+
+@media screen and (max-width: 1280px) {
+
+    body,
+    input,
+    select,
+    textarea {
+        font-size: 12pt;
+    }
+
+
+}
+@media screen and (max-width: 736px) {
+   /* -----------------------.home----------------------- */
+    .home-body {padding: 1rem;
+        height: 100%;
+        margin:0 0 2rem 0;
+            }   
+                 .home .flex-items {
+        display: block;
+    }
+    .home .image {height: 200px;
+        overflow: hidden;
+        
+    display: flex;
+    justify-content: center;
+    } 
+    .home .image img{height: 300px;transform: rotateY(180deg);} 
+    .youtube_container{height: 50vh;display: flex;justify-content: center;align-items: center;
+        width: 100%;margin: 0;
+        }.flyers img{z-index: -1;top: 0;width: 100%;}
+
+    /* --------------------------------.about-------------------------------- */
+    .about{padding: 1rem;height: 100%;}
+    .frame{display: none;}
+    /* .about .flex-items .left{ display: flex; flex-wrap: wrap-reverse;} */
+    .about .flex-items{ display: block;}
+    .about .flex-items .left{width: 100%;padding: 0;}
+    .about .flex-items .right{ display: flex;}
+    .about .frame_about {height: 100%;  width: 100%;}
+    .about .frame_about1 {height: 100%; margin: 0 0 0 1rem; width: 100%;}
+    /*-------------------- music-------------------- */
+    .work{ padding: 1rem;height: 100%;}
+    .work_reverse .left .frame_work img{width: 100%;margin: 0;height: 100%;}
+    .bantu_vibe_work img{width: 100%;}
+    .work .work_reverse{display: block;}
+/* albums */
+.projects,.songs{ padding: 1rem;overflow: hidden;}
+
+/* -----------------.songs----------------- */
+
+.none{display: none;}
+.songs table img{width: 15px;}
+/*------------------- footer -------------------*/
+
+.footer{padding: 1rem;margin:0;}
+.footer .flex_items{display: block;margin: 0;}
+.footer .flex_items .footer_right{width: 100%;}
+}
+@media screen and (max-width: 360px) {
+
+    body,
+    input,
+    select,
+    textarea {
+        font-size: 11pt;
+    }
+
 }
