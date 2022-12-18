@@ -18,7 +18,13 @@
     border: none;
     text-decoration: none;
 }
-
+.gap{column-count: 3;
+column-gap: 20px;column-rule-width: 1px;
+column-rule-style: solid;
+column-rule-width: 1px;
+column-rule: 1px solid lightblue;
+columns: 100px 3px;
+}
 body,
 input,
 select,
@@ -33,22 +39,21 @@ textarea {
     line-height: 1.65;
 }
 body{background-color: var(--bg);}
-
-
+.bantu-vibe{margin-bottom: 6rem;}
 /* Home designs with the cool bantu vibes */
 .home {
     color: var(--white);
 }
 
-.home .flex-items {
-    justify-content: center;
-    align-items: center;
-    display: flex;
+.home .flex-items,.work_reverse {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+   gap: 8rem;
 }
 
 .home-body {
     margin:0 0 9rem 0; width: 100%;height: 100vh;
-    padding: 3rem;
+    padding: 8rem;
     background-image: url(assets/Frame\ 7.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -75,34 +80,48 @@ justify-content: space-between;align-items: center;}
     list-style: none;
 }
 .link a {
-    width: 3rem;
-    margin: 2rem;
+    width: 100%;
+    margin: 0h0-rem;
 }
-.flyers{display: none; width: 100%;margin-top: 0; height: 30vh;}
-/* .flyers img{} */
+.flyers {    width: 100%;display: flex;margin-bottom:-16rem ;padding-left: 8rem;justify-content: center;align-items: center;}
+
+.flyers img { width: 120rem;height: 20rem; margin-bottom: -10rem; /* opacity: .6; */}
+
+.flyers1,.flyers2,.flyers3 {    width: 100%;display: flex;margin-bottom:-12rem ;padding-left: 8rem;justify-content: center;align-items: center;}
+
+.flyers1 img { width: 80rem;height: 20rem; margin-bottom: -10rem; /* opacity: .6; */}
+.flyers2 img { width: 70rem;height: 20rem; margin-bottom: -10rem; /* opacity: .6; */}
+.flyers3 img { width: 90rem;height: 20rem; margin-bottom: -5rem; /* opacity: .6; */}
+.flyers4 {    width: 100%;display: flex;margin-bottom:-12rem ;padding-left: 8rem;justify-content: center;align-items: center;}
+.flyers4 img { width: 70rem;height: 25rem; margin-bottom: -10rem; /* opacity: .6; */}
 .youtube_container{height: 90vh;display: flex;justify-content: center;align-items: center;
 width: 100%;margin: 9rem 0;
 }
 /* --------------------about-------------------- */
-.about{background-color: var(--bg);padding: 3rem;height: 110vh;overflow: hidden;margin:9rem 0;}
-.about .flex-items{display: flex;justify-content: space-between;}
-.about .flex-items .left{width: 50%;padding: 0 3rem 0 0;}
+.about{background-color: var(--bg);padding: 8rem;height: 160vh;overflow: hidden;margin:9rem 0;}
+.about .flex-items{display: flex;justify-content: space-between;margin-top: 4rem;}
+.about .flex-items .left{width: 50%;padding: 0 8rem 0 0;}
 .about .flex-items p{ font-size: 18px;line-height: 1.4;padding: 1rem 0 0 0;}
-.frame{height: 400px;overflow: hidden;margin: 2.5rem 0 0 0;}
-.about .frame_about {overflow: hidden; height: 330px; width: 100%;}
-.about .frame_about1 {overflow: hidden; height: 330px;margin: 1rem 0 0 0; width: 100%;}
-.frame img,.frame_about img,.frame_about1 img{width: 100%;}
+.frame{height: 400px;overflow: hidden;margin: 2.5rem 0 0 0;margin-top: 2rem;}
+.about .frame_about {overflow: hidden; height: 330px; width: 100%;margin-top: 2rem;}
+.about .frame_about1 {overflow: hidden; height: 330px;margin: 1rem 0 0 0; width: 100%;margin-top: 2rem;}
+.frame img,.frame_about img,.frame_about1 img{width: 100%;margin-top: 2rem;}
 /* --------------------music-------------------- */
-.work{background-color: var(--bg); padding: 3rem;height: 100vh;overflow: hidden;margin:9rem 0;}
-.work .work_reverse{display: flex;justify-content: space-between;}
-.work_reverse .left{width: 100%;margin: 0 3rem 0 0;}
+.work{background-color: var(--bg); padding: 8rem;height: 120vh;overflow: hidden;margin:9rem 0;}
+/* .work .work_reverse{display: flex;justify-content: space-between;} */
+.work_reverse .left{width: 100%;margin: 0 8rem 0 0;}
 .work p{ font-size: 18px;line-height: 1.4;padding: 1rem 0 0 0;}
 .work_reverse .right .frame_side img{width: 100%;}
-.work .left .frame_work img{width: 100%;}
+.work .left .frame_work img{width: 100%;background-color: gold;}
+.bantu-vibe_album{padding-left: 30%;margin-bottom: 4rem;}
+
 /* albums */
-.projects,.songs,.Ideas{background-color: var(--bg); padding: 3rem;overflow: hidden;margin:9rem 0;}
+.projects,.songs,.Ideas{background-color: var(--bg);overflow: hidden;margin:9rem 0;padding:0 8rem;}.projects li img.wena{ width: 70px;}
+.Ideas .flex{display: flex;justify-content: flex-start;align-items: center;margin-left: 50%;}.let{margin-right: 2rem;}
+.Ideas .flex-items{display: flex;justify-content: center;align-items: center;}
 .projects .flex-items{display: flex;width: 100%;}
 .projects .flex-items img{display: flex;width: 100%;}
+.bantu-vibe_single{padding-left: 30%;margin-bottom: 4rem;}li.up{margin-top: -8rem;}
 /* ------------------.Ideas------------------ */
 
 .Ideas img{width: 200px;}
@@ -132,15 +151,15 @@ th {
     text-align: left;
 }
 /* -----------------footer----------------- */
-.footer{padding: 3rem;height: 100%;overflow: hidden;margin:9rem 0;}
-.footer .flex_items{display: flex;margin: 0 0 3rem 0;justify-content: space-between;}
+.footer{padding: 8rem;height: 100%;overflow: hidden;margin:5rem 0;}
+.footer .flex_items{display: flex;margin: 0 0 2rem 0;justify-content: space-between;}
 .footer_right ul{display: flex;}
 .footer .flex_items .footer_right{width: 40%;display: block;}
 .flex_logo{display: flex;width: 220px;align-items: center;justify-content: center;}
 .footer .box-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    gap: 3rem;
+    gap: 8rem;
 }
 
 .footer .box-container .box h3 {
@@ -166,8 +185,8 @@ th {
 
 .footer .credit {
     text-align: center;
-    padding-top: 3rem;
-    margin-top: 3rem;
+    padding-top: 8rem;
+    margin-top: 8rem;
     /* border-top: .1rem solid var(--light-white); */
     color: var(--white);
 }
@@ -208,24 +227,36 @@ th {
 }
 @media screen and (max-width: 736px) {
    /* -----------------------.home----------------------- */
-    .home-body {padding: 1rem;
+    .home-body {padding: 1rem 1rem 0 1rem;
         height: 100%;
-        margin:0 0 2rem 0;
-            }   
+        margin:0;display: block;
+gap: 0;            }   
                  .home .flex-items {
-        display: block;
+        display: flex;flex-wrap: wrap-reverse;
     }
-    .home .image {height: 200px;
+    .home .image {height: 400px;
         overflow: hidden;
-        
-    display: flex;
+            display: flex;
     justify-content: center;
-    } 
-    .home .image img{height: 300px;transform: rotateY(180deg);} 
+    } .home .flex-items,.work_reverse {
+        display: grid;width: 100%;
+        gap: 0rem;
+     }
+     
+    .home .image img{height: 600px;} 
     .youtube_container{height: 50vh;display: flex;justify-content: center;align-items: center;
         width: 100%;margin: 0;
-        }.flyers img{z-index: -1;top: 0;width: 100%;}
+        }
+        .flyers img {
+            width: 20rem;
+            height: 100%;
+        }
+        .flyers,.flyers1,.flyers2,.flyers3,.flyers4 {  margin-bottom:-15rem ;padding-left: 0;width: 100%;}
 
+.flyers img ,.flyers1 img,.flyers2 img,.flyers3 img ,.flyers4 img   { width: 100%;height: 100%; margin-bottom: 0; /* opacity: .6; */}
+.youtube_container{height: 90vh;display: flex;justify-content: center;align-items: center;
+width: 100%;margin: 9rem 0;
+}
     /* --------------------------------.about-------------------------------- */
     .about{padding: 1rem;height: 100%;}
     .frame{display: none;}
@@ -237,18 +268,26 @@ th {
     .about .frame_about1 {height: 100%; margin: 0 0 0 1rem; width: 100%;}
     /*-------------------- music-------------------- */
     .work{ padding: 1rem;height: 100%;}
-    .work_reverse .left .frame_work img{width: 100%;margin: 0;height: 100%;}
+    .work_reverse .left .frame_work {width: 100%;margin: 0;height: 300px;overflow: hidden;}
+    .work_reverse .left .frame_work img{width: 100%;margin: 0;}
     .bantu_vibe_work img{width: 100%;}
+    .Ideas .flex{margin-left: 7%;}.let{margin-right: 0;}
+
     .work .work_reverse{display: block;}
 /* albums */
 .projects,.songs{ padding: 1rem;overflow: hidden;}
 
 /* -----------------.songs----------------- */
+.bantu-vibe_single,.bantu-vibe_album{padding-left: 0;margin-bottom: 0;}
 
 .none{display: none;}
 .songs table img{width: 15px;}
 /*------------------- footer -------------------*/
-
+.footer .box-container ,.work_reverse{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+}
 .footer{padding: 1rem;margin:0;}
 .footer .flex_items{display: block;margin: 0;}
 .footer .flex_items .footer_right{width: 100%;}
@@ -262,4 +301,16 @@ th {
         font-size: 11pt;
     }
 
-}
+}.grid{display: grid;}
+@media only screen and (min-width: 500px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+  }
+  
+  @media only screen and (min-width: 800px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+  }
+  
