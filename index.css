@@ -120,7 +120,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.link{display: flex;}
+.link{display: flex;max-width: 100%;}
 .link li {
   font-weight: bolder;
   list-style: none;
@@ -495,10 +495,10 @@ img.rwa {
 
 /* ----.-------------footer----------------- */
 .footer {
-  padding: 8rem;
+  padding: 2rem 8rem;
   height: 100%;
   overflow: hidden;
-  margin: 5rem 0;
+  margin: 2rem 0;
 }
 
 .footer .flex_items {
@@ -529,17 +529,17 @@ img.rwa {
 
 .footer .box-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  gap: 8rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
 }
 
 .footer .box-container .box h3 {
   color: var(--white);
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 .box.second {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .footer .box-container .box a {
@@ -696,6 +696,9 @@ img.rwa {
 
   .frame {
     display: none;
+  }
+  .link a {
+    margin: 0 .5rem;
   }
 
   /* .about .flex-items .left{ display: flex; flex-wrap: wrap-reverse;} */
