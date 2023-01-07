@@ -48,8 +48,8 @@ body {
 .home .flex-items,
 .work_reverse {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  gap: 8rem;
+  grid-template-columns: repeat(auto-fit, minmax(26rem, 1fr));
+  gap: 6rem;
 }
 
 .home-body {
@@ -100,7 +100,10 @@ body {
   display: flex;
   justify-content: center;
 }
-.link{display: flex;max-width: 100%;}
+.link{
+  display: flex;
+  width: 100%;
+}
 .link li {
   font-weight: bolder;
   list-style: none;
@@ -112,43 +115,45 @@ body {
 }
 
 .flyers {
-  width: 100%;
+  width: 90%;
   display: flex;
-  margin-bottom: -16rem;
-  padding-left: 8rem;
+  margin-bottom: -14rem;
+  padding-left: 6rem;
   justify-content: center;
   align-items: center;
 }
 
 .flyers img {
+  z-index: .1;
+  max-width: 100%;
   width: 100%;
-  height: 20rem;
-  margin-bottom: -10rem;
+  height: 13rem;
+  margin-bottom: -6rem;
   /* opacity: .6; */
 }
 
 .flyers1,
 .flyers2,
 .flyers3 {
-  width: 100%;
+  width: 90%;
   display: flex;
   margin-bottom: -12rem;
-  padding-left: 8rem;
+  padding-left: 6rem;
   justify-content: center;
   align-items: center;
 }
 
 .flyers1 img {
   width: 80rem;
-  height: 20rem;
+  height: 15rem;
   margin-bottom: -10rem;
   /* opacity: .6; */
 }
 
 .flyers2 img {
   width: 70rem;
-  height: 20rem;
-  margin-bottom: -10rem;
+  height: 17rem;
+  margin-bottom: -7rem;
   /* opacity: .6; */
 }
 
@@ -163,7 +168,7 @@ body {
   width: 100%;
   display: flex;
   margin-bottom: -12rem;
-  padding-left: 8rem;
+  padding-left: 6rem;
   justify-content: center;
   align-items: center;
 }
@@ -187,11 +192,13 @@ body {
 /* --------------------about-------------------- */
 .about {
   background-color: var(--bg);
-  padding: 8rem;
+  padding: 6rem;
   height: 160vh;
   overflow: hidden;
   margin: 9rem 0;
-}
+} 
+ .about .flex-items .right {
+width: 50%;}
 
 .about .flex-items {
   display: flex;
@@ -201,7 +208,7 @@ body {
 
 .about .flex-items .left {
   width: 50%;
-  padding: 0 8rem 0 0;
+  padding: 0 6rem 0 0;
 }
 
 .about .flex-items p {
@@ -210,17 +217,18 @@ body {
   padding: 1rem 0 0 0;
 }
 
-.frame {
+.frame ,.frame_side{
   height: 400px;
+  width: 100%;
   overflow: hidden;
   margin: 2.5rem 0 0 0;
-  margin-top: 2rem;
 }
+.frame img,.about .frame_about img,.about .frame_about1 img{height: 100%;  max-width: 100%;
+width: 100%;}
 
 .about .frame_about {
   overflow: hidden;
-  height: 330px;
-  width: 100%;
+  height:clamp(330px,20vw,400px) ;
   margin-top: 2rem;
 }
 
@@ -232,17 +240,10 @@ body {
   margin-top: 2rem;
 }
 
-.frame img,
-.frame_about img,
-.frame_about1 img {
-  width: 100%;
-  margin-top: 2rem;
-}
-
 /* --------------------music-------------------- */
 .work {
   background-color: var(--bg);
-  padding: 8rem;
+  padding: 6rem;
   height: 120vh;
   overflow: hidden;
   margin: 9rem 0;
@@ -251,7 +252,7 @@ body {
 /* .work .work_reverse{display: flex;justify-content: space-between;} */
 .work_reverse .left {
   width: 100%;
-  margin: 0 8rem 0 0;
+  margin: 0 6rem 0 0;
 }
 
 .work p {
@@ -261,10 +262,12 @@ body {
 }
 
 .work_reverse .right .frame_side img {
-  width: 100%;
+  max-width: 100%;
+  width: 100%;height: 100%;
 }
 
 .work .left .frame_work img {
+  max-width: 100%;
   width: 100%;
   background-color: gold;
 }
@@ -285,7 +288,7 @@ body {
   background-color: var(--bg);
   overflow: hidden;
   margin: 9rem 0;
-  padding: 0 8rem;
+  padding: 0 6rem;
 }
 
 .projects li img.wena {
@@ -318,14 +321,14 @@ body {
   display: flex;
   width: 100%;
 }
-
+.bantu-vibe_about{margin-bottom: -2rem;}
 .bantu-vibe_single {
   padding-left: 30%;
   margin-bottom: 4rem;
 }
 
 li.up {
-  margin-top: -8rem;
+  margin-top: -6rem;
 }
 
 /* ------------------.Ideas------------------ */
@@ -475,7 +478,7 @@ img.rwa {
 
 /* ----.-------------footer----------------- */
 .footer {
-  padding: 2rem 8rem;
+  padding: 2rem 6rem;
   height: 100%;
   overflow: hidden;
   margin: 2rem 0;
@@ -594,9 +597,9 @@ img.rwa {
 
   /* -----------------------.home----------------------- */
   .home-body {
-    padding: 1rem 1rem 0 1rem;
+    /* padding: 1rem 1rem 0 1rem; */
     height: 100%;
-    margin: 0;
+    margin: 0;padding: 0;
     display: block;
     gap: 0;
   }
@@ -620,6 +623,9 @@ img.rwa {
     gap: 0rem;
   }
 
+.link{
+  width: 100%;
+}.link img{width: 2rem;}
   .home .image img {
     height: 600px;
   }
@@ -643,7 +649,7 @@ img.rwa {
   .flyers2,
   .flyers3,
   .flyers4 {
-    margin-bottom: -10rem;
+    margin-bottom: -12rem;
     padding-left: 0;
     width: 90vw;
   }
@@ -681,29 +687,30 @@ img.rwa {
     margin: 0 .5rem;
   }
 
-  /* .about .flex-items .left{ display: flex; flex-wrap: wrap-reverse;} */
   .about .flex-items {
-    display: block;
+    display: block;width: 100%;
   }
-
+  .work_reverse .right {
+    padding-top: 2rem;}
+.left {
+    width: 100%;
+    padding: 0;
+  } .about .flex-items .right {display: flex;
+    width: 100%;}
   .about .flex-items .left {
     width: 100%;
     padding: 0;
   }
-
-  .about .flex-items .right {
-    display: flex;
-  }
-
   .about .frame_about {
+    margin: 2rem 0 0 0;
     height: 100%;
-    width: 100%;
+    width: 50%;
   }
 
   .about .frame_about1 {
     height: 100%;
-    margin: 0 0 0 1rem;
-    width: 100%;
+    margin: 2rem 0 0 0;
+    width: 50%;
   }
 
   /*-------------------- music-------------------- */
@@ -720,11 +727,13 @@ img.rwa {
   }
 
   .work_reverse .left .frame_work img {
+    max-width: 100%;
     width: 100%;
     margin: 0;
   }
 
   .bantu_vibe_work img {
+    max-width: 100%;
     width: 100%;
   }
 
@@ -790,6 +799,7 @@ img.rwa {
   }
 
   .about_items .about_frame img {
+    max-width: 100%;
     width: 100%;
   }
 
@@ -808,6 +818,7 @@ img.rwa {
 
   .merch .merch_frame img {
     width: 100%;
+    max-width: 100%;
     height: 50vh;
     object-fit: fill;
     -o-object-fit: fill;
@@ -833,6 +844,7 @@ img.rwa {
   }
 
   .event_items_top img {
+    max-width: 100%;
     width: 70%;
   }
 
@@ -860,15 +872,14 @@ img.rwa {
   .footer .box-container,
   .work_reverse {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     gap: 1rem;
   }
 
   .box.events {
     width: 95vw;
   }
-  .navbar
-  {padding: 1rem;
+  .navbar  {margin: 1rem;
       }
   .footer {
     padding: 3rem 1rem;
@@ -895,7 +906,8 @@ img.rwa {
     font-size: 550;
     line-height: 1.65;
   }
-
+  .footer .flex_items .footer_right .link {
+padding-top: 2rem;}
   .none {
     display: none;
   }
