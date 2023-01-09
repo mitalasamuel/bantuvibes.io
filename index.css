@@ -1,6 +1,7 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400&display=swap"); */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
- @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap'); 
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
 :root {
   --white: rgba(250, 246, 246, 0.747);
   --light-black: rgb(179, 175, 175);
@@ -10,7 +11,7 @@
 }
 
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -29,23 +30,26 @@ body {
   padding: 0;
   color: var(--light-black);
   font-size: 17pt;
-  font-weight: 200;
+  font-weight: 500;
   line-height: 1.3;
 }
 
-.bantu-vibe {
-  margin-bottom: 6rem;
-  width: 200px;
+.bantu-vibe h1 {
+  font-size: clamp(1rem, 10vw, 4rem);
+  font-family: "Bangers", cursive;
+  color: white;
+  padding-left: 7rem;
 }
 
 /* Home designs with the cool bantu vibes */
-.home  .flex-items{
+.home .flex-items {
   color: var(--white);
   display: flex;
 }
 
-
 .home-body {
+  margin-top: -8rem;
+  padding-top: 8rem;
   background-image: url(assets/Frame\ 7.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -55,7 +59,7 @@ body {
 
 .home .right {
   font-weight: 500;
-width: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,7 +73,7 @@ width: 100%;
   align-items: center;
 }
 
- .image {
+.image {
   overflow: hidden;
   padding-left: 2rem;
   width: 30px;
@@ -82,7 +86,7 @@ width: 100%;
   height: 100%;
 }
 
-.space{
+.space {
   margin: 1rem;
 }
 
@@ -92,24 +96,31 @@ width: 100%;
   display: flex;
   justify-content: center;
 }
-.cx h1{ color: white;
+
+.cx h1 {
+  color: white;
   font-size: clamp(7rem, 20vw, 14rem);
   /* letter-spacing: clamp(0.5rem, 2vw, 1rem);    */
-  font-family: 'Bangers', cursive;
+  font-family: "Bangers", cursive;
+}.blog{padding: clamp(3rem,10vw,4rem);}
+.blog a{color: rgb(172, 61, 21);}
+
+.link {
+  padding-top: 2rem;
+   display: flex;
+  max-width: 100%;
 }
-.link{
-  display: flex;max-width: 100%;
-}
+
 .link li {
   font-weight: bolder;
   list-style: none;
 }
 
-
 .link a {
   margin: 0 1rem;
 }
-.content{
+
+.content {
   margin: 0 0 1rem 0;
 }
 
@@ -118,15 +129,15 @@ width: 100%;
   /* border: 1px solid white; */
   top: 0;
   z-index: -1;
-  font-family: 'Bangers', cursive;
+  font-family: "Bangers", cursive;
   width: 80%;
   padding-left: 8rem;
 }
-.flyers h1{
+
+.flyers h1 {
   color: rgb(55, 54, 54);
   font-size: clamp(4rem, 60vw, 15rem);
-  letter-spacing: .5rem;
-  font-family: 'Bangers', cursive;
+  font-family: "Bangers", cursive;
 }
 
 .youtube_container {
@@ -139,22 +150,31 @@ width: 100%;
 }
 
 /* --------------------about-------------------- */
-.wrap{position: relative;
-/* border: 1px solid yellow; */
-padding: 8rem 0 8rem 0;
+.wrap {
+  position: relative;
+  /* border: 1px solid yellow; */
+  padding: 8rem 0;
 }
+
 .about {
   /* border: 1px solid red; */
-  padding:0 8rem;
+  padding: 0 8rem;
   overflow: hidden;
   margin: -8rem 0 0 0;
+}
 
-}
-.bantu-vibe_about h1{
+.bantu-vibe_about h1 {
   font-size: clamp(1rem, 6vw, 3rem);
-  font-family: 'Bangers', cursive;
-color: white;
+  font-family: "Bangers", cursive;
+  color: white;
 }
+
+.bantu-vibe_about h1 span {
+  font-size: clamp(1rem, 6vw, 3rem);
+  font-family: "Bangers", cursive;
+  color: rgb(55, 54, 54);
+}
+
 .about .flex-items .right {
   width: 50%;
   /* border: 1px solid white; */
@@ -178,13 +198,23 @@ color: white;
 }
 
 .frame {
-  /* height: 400px; */
   width: 100%;
   overflow: hidden;
   margin: 2.5rem 0 0 0;
   margin-top: 2rem;
-  /* border: 1px solid white; */
   aspect-ratio: 3/4;
+}
+
+.frame_album {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4/4;
+  padding: 2rem 0 0 6rem;
+}
+
+.frame_album img {
+  width: 100%;
+  height: 100%;
 }
 
 .about .frame_about {
@@ -194,6 +224,7 @@ color: white;
   margin-top: 1rem;
   aspect-ratio: 3/4;
 }
+
 .frame img,
 .frame_about img,
 .frame_about1 img {
@@ -202,7 +233,6 @@ color: white;
   margin-top: 2rem;
   object-fit: fill;
   max-width: 100%;
-
 }
 
 /* --------------------music-------------------- */
@@ -210,12 +240,16 @@ color: white;
   padding: 8rem;
   height: 100%;
   overflow: hidden;
-margin-top: -10rem;}
+  margin-top: -10rem;
+}
 
-.work .work_reverse{display: flex;justify-content: space-between;}
+.work .work_reverse {
+  display: flex;
+  justify-content: space-between;
+}
+
 .work_reverse .left {
   width: 100%;
-  margin: 0 8rem 0 0;
 }
 
 .work p {
@@ -224,13 +258,22 @@ margin-top: -10rem;}
   padding: 1rem 0 0 0;
 }
 
-.work_reverse .right .frame_side img {
+.work_reverse .right {
+  width: 50%;
+}
+
+.work .left .frame_work {
+  aspect-ratio: 3/4;
+  margin-bottom: -2rem;
+  height: 100%;
   width: 100%;
+  overflow: hidden;
+  background-color: gold;
 }
 
 .work .left .frame_work img {
   width: 100%;
-  background-color: gold;
+  height: 103%;
 }
 
 .bantu-vibe_album {
@@ -246,13 +289,15 @@ margin-top: -10rem;}
 .projects,
 .songs,
 .Ideas {
- height: 100vh;
+  height: 100vh;
   overflow: hidden;
   padding: 0 8rem;
 }
-.Ideas{
+
+.Ideas {
   margin-top: -10rem;
 }
+
 .projects li img.wena {
   width: 70px;
 }
@@ -332,8 +377,11 @@ th {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 0 6rem;
 }
-.abouts .bantu-vibe_about{
-padding: 0 0 0 8rem;}
+
+.abouts .bantu-vibe_about {
+  padding: 0 0 0 8rem;
+}
+
 .about_items .about_frame img {
   width: 100%;
 }
@@ -348,34 +396,29 @@ padding: 0 0 0 8rem;}
 /*----------------- merch page----------------- */
 .merch {
   display: grid;
-  padding: 0 6rem;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+}
+
+.merch_items {
+  padding: 3rem 6rem 0 3rem;
 }
 
 .merch .merch_frame img {
   width: 100%;
-  height: 70vh;
+  height: 100%;
+  margin: 2rem;
   object-fit: fill;
   -o-object-fit: fill;
 }
 
 .merch_listen img {
-  width: 80vw;
-  padding: 2rem;
+  width: 100%;
 }
 
 .browse {
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.album-vibe img {
-  width: 50%;
-}
-
-img.rwa {
-  width: 45px;
 }
 
 .browse li img {
@@ -393,27 +436,41 @@ img.rwa {
   margin: 0 20px;
 }
 
+.button a {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: "Bangers", cursive;
+  color: var(--bg);
+}
+
 /*------------------ events------------------ */
 .main {
   position: relative;
- left: 0;
-/*  note vh and vw switched  */
-  width: 100vw; 
+  left: 0;
+  /*  note vh and vw switched  */
+  width: 100vw;
   height: 100vw;
-/*    */
+  /*    */
   transform-origin: top left;
   transform: rotate(-90deg) translateX(-100vh);
   overflow-x: hidden;
   overflow-y: scroll;
-/*   scroll-snap-type: y mandatory; */
+  /*   scroll-snap-type: y mandatory; */
 }
-.wrap_up{margin-top: -100vh;}
-.event_items {
+.main1 {
+  position: relative;
+  display: none;
+}
+
+.wrap_up {
+  margin-top: -90vh;
+}
+
+.main .event_items {
   width: 30vw;
   height: 100%;
-  margin: 0 2rem;
+  margin: 2rem;
   background-color: rgb(55, 54, 54);
-/*   scroll-snap-align: start; */
+  /*   scroll-snap-align: start; */
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
@@ -421,32 +478,67 @@ img.rwa {
   backface-visibility: hidden;
 }
 
-.Events{
+.Events {
   padding: 0 0 4rem;
   z-index: 1000;
   width: 50%;
 }
+
 .event_items_top {
   margin-top: -8rem;
   padding: 0 6rem;
   overflow: hidden;
 }
-.event-vibe_about h1 {font-size: clamp(1rem, 5vw, 2rem);
-font-family: 'Bangers', cursive;
-color: white;
+
+.event-vibe_about h1 {
+  font-size: clamp(1rem, 5vw, 2rem);
+  font-family: "Bangers", cursive;
+  color: white;
 }
 
 .event_items_top p {
   margin-top: 2rem;
 }
-.event_container {
+
+.main .event_container {
   display: flex;
   flex-direction: row;
   width: fit-content;
   height: fit-content;
   transform-origin: top left;
   transform: rotate(90deg) translateY(-100vh);
-}.track .event_frame{width: 100%;}
+}
+.main1 .event_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.track_box {
+  padding: 0 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.track_box_items {
+  aspect-ratio: 4/4;
+  padding: 0 0 0 0rem;
+  padding: 3rem;
+}
+
+.track .event_frame {
+  width: 100%;
+}
+
+.track_box section {
+  overflow: hidden;
+  background-color: gold;
+  height: 100%;
+}
+
+.track_box .frame_album img {
+  height: 110%;
+}
+
 /* .event_container {
   overflow: hidden;
   display: grid;
@@ -454,19 +546,24 @@ color: white;
   gap: 2rem;
   padding: 0 6rem;
 } */
-.track_content{
+.track_content {
   padding: 2rem;
 }
-.track_content .flex_items{display: flex;
-align-items: center;}
+
+.track_content .flex_items {
+  display: flex;
+  align-items: center;
+}
 
 .event_frame img {
+  width: 100%;
   object-fit: fill;
   -o-object-fit: fill;
 }
 
 .track_container {
   overflow: hidden;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -474,20 +571,18 @@ align-items: center;}
 }
 
 .track_table {
-  padding: 0 1rem;
+  padding: 0 6rem;
 }
 
-.track {
-  display: flex;
+.track_frame {
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  height: 100%;
 }
 
-.track img {
+.track_frame img {
+  height: 100%;
   width: 100%;
 }
-
 /* ----.-------------footer----------------- */
 .footer {
   padding: 2rem 8rem;
@@ -582,7 +677,6 @@ align-items: center;}
 }
 
 @media screen and (max-width: 1680px) {
-
   body,
   input,
   select,
@@ -596,7 +690,6 @@ align-items: center;}
 }
 
 @media screen and (max-width: 1280px) {
-
   body,
   input,
   select,
@@ -606,16 +699,17 @@ align-items: center;}
 }
 
 @media screen and (max-width: 736px) {
-
   /* -----------------------.home----------------------- */
-  .home-body {
-    padding: 1rem 1rem 0 1rem;
-    height: 100%;
-    margin: 0;
-    display: block;
-    gap: 0;
+  .wrap {
+    position: relative;
+    /* border: 1px solid yellow; */
+    padding: 3rem 0;
   }
-.space{margin: 1rem;}
+
+  .space {
+    margin: 1rem;
+  }
+
   .home .image {
     height: 400px;
     overflow: hidden;
@@ -623,21 +717,31 @@ align-items: center;}
     padding-left: 0;
     justify-content: center;
   }
-  .home .right {width: 90%;
+
+  .home .right {
+    width: 90%;
     padding-right: 0rem;
   }
-    .home .flex-items{
-flex-direction: column-reverse;    }
+
+  .home .flex-items {
+    flex-direction: column-reverse;
+  }
+
   .work_reverse {
     display: block;
     width: 100%;
     gap: 0rem;
   }
 
-  .home .image img {padding-top: 2rem;
+  .home .image img {
+    padding-top: 2rem;
     height: 600px;
   }
-.cx p{margin-top: 2rem;}
+
+  .cx p {
+    margin-top: 2rem;
+  }
+
   .youtube_container {
     height: 50vh;
     display: flex;
@@ -646,6 +750,7 @@ flex-direction: column-reverse;    }
     width: 100%;
     margin: 0;
   }
+
   .youtube_container {
     height: 90vh;
     display: flex;
@@ -654,15 +759,16 @@ flex-direction: column-reverse;    }
     width: 100%;
     margin: 2rem 0;
   }
+
   .flyers {
     width: 90%;
     padding: 1rem;
   }
-  .flyers h1{
+
+  .flyers h1 {
     font-size: clamp(2rem, 17vw, 8rem);
-    font-family: 'Bangers', cursive;
+    font-family: "Bangers", cursive;
   }
-  
 
   /* --------------------------------.about-------------------------------- */
   .about {
@@ -670,11 +776,8 @@ flex-direction: column-reverse;    }
     height: 100%;
   }
 
-  .frame {
-    display: none;
-  }
   .link a {
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
   }
 
   /* .about .flex-items .left{ display: flex; flex-wrap: wrap-reverse;} */
@@ -688,7 +791,8 @@ flex-direction: column-reverse;    }
   }
 
   .about .flex-items .right {
-    display: flex;width: 100%;
+    display: flex;
+    width: 100%;
   }
 
   /*-------------------- music-------------------- */
@@ -700,8 +804,9 @@ flex-direction: column-reverse;    }
   .work_reverse .left .frame_work {
     width: 100%;
     margin: 0;
-    height: 300px;
+    height: 100%;
     overflow: hidden;
+    aspect-ratio: 3/4;
   }
 
   .work_reverse .left .frame_work img {
@@ -711,6 +816,11 @@ flex-direction: column-reverse;    }
 
   .bantu_vibe_work img {
     width: 100%;
+  }
+
+  .Ideas {
+    height: 100%;
+    margin-top: 0;
   }
 
   .Ideas .flex {
@@ -734,10 +844,15 @@ flex-direction: column-reverse;    }
   .songs {
     padding: 1rem;
     overflow: hidden;
+    height: 100%;
   }
 
   h3 {
     font-size: 20px;
+  }
+
+  .work_reverse .right {
+    width: 100%;
   }
 
   /* -----------------.songs----------------- */
@@ -752,18 +867,11 @@ flex-direction: column-reverse;    }
     width: 200px;
   }
 
-  .bantu-vibe {
-    margin-bottom: 1rem;
-    width: 300px;
-    position: absolute;
-    margin-top: -25rem;
-  }
-
   .bantu-vibe img {
     width: 300px;
   }
 
-  .songs table img {
+  .song_table img {
     width: 15px;
   }
 
@@ -786,51 +894,69 @@ flex-direction: column-reverse;    }
   }
 
   /*---------------------- merch page---------------------- */
-  .merch {
+  .track_box {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 0 1rem;
   }
 
-  .merch .merch_frame img {
-    width: 100%;
-    height: 50vh;
-    object-fit: fill;
-    -o-object-fit: fill;
+  .track_box_items {
+    padding: 0rem;
+    padding: 1.5rem 0 0 0;
+  }
+  .merch {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .merch_items {
+    padding: 1rem;
+  }
+  .frame_album {
+    padding: 1rem 0rem;
+  }
+
+  .browse {
+    padding: 0 0 2rem 0;
   }
 
   /*------------------ events------------------ */
   .event_items_top {
     padding: 0 1rem;
   }
+
   .main {
-    position: relative;
-    background-color: red;
-   left: 0;
-  /*  note vh and vw switched  */
-    width: 100%; 
-    height: 100vh;
-    }
-  .wrap_up{margin-top: 0vh;}
-  .event_items {
-    width: 100%;
-    height: 100%;
-    margin: 0 0rem;
-    background-color: rgb(55, 54, 54);
-  /*   scroll-snap-align: start; */
-    overflow: visible;
+    display: none;
+  }
+  .main1 {
     display: block;
   }
-  
-  .Events{
-    padding: 0 ;
+  .wrap_up {
+    margin-top: 0vh;
+  }
+
+  .main1 .event_items {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(55, 54, 54);
+  }
+  .main1 .event_items img {
+    width: 100%;
+    object-fit: contain;
+    height: 100%;
+    background-color: rgb(55, 54, 54);
+  }
+
+  .Events {
+    padding: 0;
     z-index: 1000;
     width: 100%;
   }
+
   .event_items_top {
     margin-top: 0rem;
     padding: 0 1rem;
     overflow: visible;
   }
+
   .event_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -855,15 +981,14 @@ flex-direction: column-reverse;    }
     gap: 1rem;
     padding: 0 1rem;
   }
-  .track {
-    display: flex;
-    justify-content: space-between;
-  }
 
   .track_table {
     padding: 0 1rem;
   }
-  .wrap_up{margin-top: 0vh;}
+
+  .wrap_up {
+    margin-top: 0vh;
+  }
 
   .album {
     padding: 0 1rem;
@@ -880,9 +1005,11 @@ flex-direction: column-reverse;    }
   .box.events {
     width: 95vw;
   }
-  .navbar
-  {padding: 1rem;
-      }
+
+  .navbar {
+    padding: 1rem;
+  }
+
   .footer {
     padding: 3rem 1rem;
     margin: 0;
@@ -922,7 +1049,6 @@ flex-direction: column-reverse;    }
 }
 
 @media screen and (max-width: 360px) {
-
   body,
   input,
   select,

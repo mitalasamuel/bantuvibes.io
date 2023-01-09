@@ -1,73 +1,68 @@
-.navbar
-{padding: 2rem 6rem;
-  position:relative;
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.navbar {
+  padding: 2rem 6rem;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.navbar .logo
-{z-index: 1000;
-  font-size:2em;
-  font-weight:bold;
+.navbar .logo {
+  z-index: 1000;
+  font-size: 2em;
+  font-weight: bold;
 }
-.navbar .nav-links ul
-{
-  display:flex;
+.navbar .nav-links ul {
+  display: flex;
 }
-.navbar .nav-links ul li
-{
-  margin:0 5px;
+.navbar .nav-links ul li {
+  margin: 0 5px;
 }
-.navbar .nav-links ul li.active a
-{
-  color:#ed3c57;
-  font-weight:600;
+.navbar .nav-links ul li.active a {
+  color: #ed3c57;
+  font-weight: 600;
 }
-.navbar a 
-{
-  color:white;
+.navbar a {
+  color: white;
 }
-.navbar .menu-hamburger
-{
-  display:block;
-  font-size:35px;
-  cursor:pointer;
+.navbar .menu-hamburger {
+  display: block;
+  font-size: 35px;
+  cursor: pointer;
 }
-  
-  .navbar .menu-hamburger
-  {
-    display:block;z-index: 1000;
-  }
-  .nav-links
-  {
-    top:0;
-    left:-200%;
-    position:absolute;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:rgba(0,0,0,0.5);
-    backdrop-filter:blur(8px);
-    width:100%;
-    height:100vh;margin: 0;
-    transition: left 0.5s ease;
-    
-  }
-  .nav-links.mobile-menu
-  {
-  left:0;width: 100%;padding: 0;
-    height: 100vh;
-  }
 
-  .nav-links ul
-  {
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-  }
-  .navbar .nav-links ul li
-  {
-  margin:25px 0;
-  font-size:1.2em;
-  }
+.navbar .menu-hamburger {
+  display: block;
+  z-index: 1000;
+}
+.nav-links {
+  top: 0;
+  left: -200%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  transition: left 0.5s ease;
+}
+.nav-links.mobile-menu {
+  left: 0;
+  width: 100%;
+  padding: 0;
+  height: 100vh;
+}
+
+.nav-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbar .nav-links ul li {
+  margin: 25px 0;
+  font-size: 1.2em;
+}
