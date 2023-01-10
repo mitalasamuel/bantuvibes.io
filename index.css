@@ -10,7 +10,7 @@
   --bg: black;
 }
 a{
-  color: white;
+ 
 }
 * {
   font-family: "Poppins", sans-serif;
@@ -25,7 +25,7 @@ hr {
   border-bottom: solid 1px rgba(241, 241, 241, 0.3);
   margin: 1em 0;
 }
-
+p{color: var(--light-white);}
 body {
   background-color: var(--bg);
   margin: 0;
@@ -39,7 +39,7 @@ body {
 .bantu-vibe h1 {
   font-size: clamp(1rem, 10vw, 4rem);
   font-family: "Bangers", cursive;
-  color: white;
+  color: var(--white);
   padding-left: 7rem;
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 .cx h1 {
-  color: white;
+ 
   font-size: clamp(7rem, 20vw, 14rem);
   /* letter-spacing: clamp(0.5rem, 2vw, 1rem);    */
   font-family: "Bangers", cursive;
@@ -171,9 +171,9 @@ body {
 }
 
 .bantu-vibe_about h1 {
-  font-size: clamp(1rem, 6vw, 3rem);
+  font-size: clamp(2rem, 6vw, 3rem);
   font-family: "Bangers", cursive;
-  color: white;
+ 
 }
 
 .bantu-vibe_about h1 span {
@@ -363,7 +363,7 @@ tr:nth-of-type(odd) {
 th {
   text-align: center;
   background: #333;
-  color: white;
+ 
   font-weight: bold;
 }
 
@@ -395,7 +395,6 @@ th {
 .about_items .about_frame {
   height: 100vh;
   overflow: hidden;
-  background-color: gold;
   margin-right: 2rem;
 }
 
@@ -435,11 +434,11 @@ th {
 
 .button {
   background-color: var(--light-white);
-  padding: 5px 20px;
   text-align: center;
-  display: flex;
-  justify-content: center;
+display: inline-block;
+  justify-content: center;text-align: center;
   margin: 0 20px;
+
 }
 
 .button a {
@@ -499,7 +498,7 @@ th {
 .event-vibe_about h1 {
   font-size: clamp(1rem, 5vw, 2rem);
   font-family: "Bangers", cursive;
-  color: white;
+ 
 }
 
 .event_items_top p {
@@ -895,6 +894,11 @@ th {
   }
 
   /*---------------------- merch page---------------------- */
+ 
+.track_frame {
+  width: 100%;
+  height: 50vh;
+}
   .track_box {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 0 1rem;
@@ -994,7 +998,7 @@ th {
   .album {
     padding: 0 1rem;
   }
-
+.bantu-vibe h1{padding: 1rem;}
   /*------------------- footer -------------------*/
   .footer .box-container,
   .work_reverse {
@@ -1044,7 +1048,7 @@ th {
   .button {
     background-color: var(--light-white);
     padding: 5px 10px;
-    margin: 2rem 0;
+    margin: 1rem 0;
     display: inline-block;
   }
 }
