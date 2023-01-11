@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
 :root {
-  --white: rgba(250, 246, 246, 0.747);
+  --white: rgb(250, 246, 246);
   --light-black: rgb(179, 175, 175);
   --light-white: rgba(235, 227, 227, 0.723);
   --dark-bg: rgba(237, 234, 234, 0.599);
@@ -365,8 +365,7 @@ form .link-btn {
 }
 
 li.up {
-  margin-top: -8rem;
-}
+padding: 0;}
 
 /* ------------------.Ideas------------------ */
 
@@ -466,6 +465,21 @@ th {
 }
 
 .button a {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-family: "Bangers", cursive;
+  color: var(--bg);
+}
+.button_1 {
+  background-color: var(--white);
+  text-align: center;
+  display: inline-block;
+  padding: .5rem 1.5rem;
+  border-radius: 2rem;
+  justify-content: center;
+  text-align: center;
+}
+
+.button_1 a {
   font-size: clamp(1rem, 2vw, 1.5rem);
   font-family: "Bangers", cursive;
   color: var(--bg);
