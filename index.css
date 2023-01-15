@@ -1,4 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400&display=swap"); */
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600,600italic");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 
@@ -9,8 +8,7 @@
   --dark-bg: rgba(237, 234, 234, 0.599);
   --bg: black;
 }
-a {
-}
+
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -45,14 +43,17 @@ body {
 }
 
 /* Home designs with the cool bantu vibes */
-.home .flex-items {
+.home  {
   color: var(--white);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .home-body {
-  margin-top: -8rem;
-  padding-top: 8rem;
+  /* border: 1px solid red; */
+  /* margin-top: -10rem; */
+  /* padding-top: 8rem; */
+  height: 100vh;
   background-image: url(assets/Frame\ 7.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -62,25 +63,39 @@ body {
 
 .home .right {
   font-weight: 500;
-  width: 100%;
-  display: flex;
+  width: 70%;
+  margin: 0 10rem 0 0;
+  /* border: 1px solid red; */
   flex-direction: column;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 2rem;
 }
-
 .right ul {
   display: flex;
   justify-content: space-between;
+ width: 80%;
   align-items: center;
+  font-size: clamp(1rem, 1.4rem, 1.8rem);
+  color: var(--dark-bg);
 }
+/* 
+.right ul {
+  display: flex;
+  justify-content: space-between;
+ width: 50%;
+  align-items: center;
+font-size: 1rem;
+  color: var(--dark-bg);
+} */
 
 .image {
-  overflow: hidden;
-  padding-left: 2rem;
-  width: 30px;
-  /* border: 1px solid white; */
+  aspect-ratio: 3/4;
+  padding: 10rem 0 0 18rem;
+  height: 100vh;
+  align-items: baseline;
+  /* border: 1px solid red; */
+  
 }
 
 .home .image img {
@@ -95,14 +110,11 @@ body {
 
 .cx {
   width: 100%;
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  
 }
 
-.cx h1 {
-  font-size: clamp(7rem, 20vw, 14rem);
-  /* letter-spacing: clamp(0.5rem, 2vw, 1rem);    */
+.home h1 {
+  font-size: clamp(6rem, 16vw, 12rem);
   font-family: "Bangers", cursive;
 }
 .blog {
@@ -252,7 +264,7 @@ body {
   padding: 8rem;
   height: 100%;
   overflow: hidden;
-  margin-top: -10rem;
+  /* margin-top: -10rem; */
 }
 
 .work .work_reverse {
@@ -260,9 +272,9 @@ body {
   justify-content: space-between;
 }
 
-.work_reverse .left {
-  width: 100%;
-}
+/* .work_reverse .left {
+  width:50%;
+} */
 
 .work p {
   font-size: 18px;
@@ -331,7 +343,11 @@ form .link-btn {
   overflow: hidden;
   padding: 0 8rem;
 }
+.projects .flex-items li{max-width: 100%;
+width: 33%;
+  border: 1px solid red;}
 
+  .projects .flex-items li img{width: 100%;}
 .Ideas {
   width: 100%;
   margin-top: -10rem;
@@ -360,13 +376,16 @@ margin: 0 .2rem;}
   width: 100%;
 }
 
-.projects .flex-items img {
-  display: flex;
-  width: 100%;
-}
-
 li.up {
-padding: 0;}
+  padding: 0;
+  height: 50%;
+  /* padding: 2rem; */
+  /* border: 1px solid red; */
+  }li.up img {
+    padding: 0;
+    height: 50%;
+    /* border: 1px solid red; */
+    }
 
 /* ------------------.Ideas------------------ */
 
@@ -490,7 +509,6 @@ th {
 .main {
   position: relative;
   left: 0;
-  /*  note vh and vw switched  */
   width: 100vw;
   height: 100vw;
   /*    */
@@ -498,7 +516,6 @@ th {
   transform: rotate(-90deg) translateX(-100vh);
   overflow-x: hidden;
   overflow-y: scroll;
-  /*   scroll-snap-type: y mandatory; */
 }
 .main1 {
   position: relative;
@@ -514,7 +531,6 @@ th {
   height: 100%;
   margin: 2rem;
   background-color: rgb(55, 54, 54);
-  /*   scroll-snap-align: start; */
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
@@ -581,14 +597,6 @@ th {
 .track_box .frame_album img {
   height: 110%;
 }
-
-/* .event_container {
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
-  padding: 0 6rem;
-} */
 .track_content {
   padding: 2rem;
 }
@@ -717,18 +725,6 @@ th {
   margin-left: 1rem;
 }
 
-@media screen and (max-width: 1680px) {
-  body,
-  input,
-  select,
-  textarea {
-    font-size: 13pt;
-  }
-
-  .home .image {
-    width: 100%;
-  }
-}
 
 @media screen and (max-width: 1280px) {
   body,
@@ -750,20 +746,29 @@ th {
   .space {
     margin: 1rem;
   }
-
-  .home .image {
-    height: 400px;
-    overflow: hidden;
-    display: flex;
-    padding-left: 0;
-    justify-content: center;
+  /* .home-body{height: 100%;} */
+.home{
+  display: flex;
+  flex-direction: column-reverse;
+   padding-top: 4rem;
+}
+  /* .home .right {
+    width: 100%;
+    margin:  0;
   }
-
-  .home .right {
-    width: 90%;
-    padding-right: 0rem;
+   */
+.cx h1 {
+  font-size: clamp(7rem, 20vw, 14rem);
+text-align: center;  font-family: "Bangers", cursive;
+}
+  .image {
+    height: 30rem;
+  padding: 0;
   }
-
+.image img{
+  height: 100%;
+  object-fit: contain;
+}
   .big_circle_event {
     top: -0.5em;
     right: -0.3rem;
@@ -779,11 +784,6 @@ th {
     display: block;
     width: 100%;
     gap: 0rem;
-  }
-
-  .home .image img {
-    padding-top: 2rem;
-    height: 600px;
   }
 
   .cx p {
@@ -815,10 +815,13 @@ th {
     /* height: 100%; */
   }
 
-  .link a {
-    margin: 0 0.5rem;
-  }
+.home li {  
+  margin: 1rem 1.5rem;
+}
 
+  .home li img{
+    width: 30px;
+  }
   /* .about .flex-items .left{ display: flex; flex-wrap: wrap-reverse;} */
   .about .flex-items {
     display: block;
@@ -869,11 +872,6 @@ th {
   .let {
     margin-right: 0;
   }
-
-  li.up {
-    margin-top: -4rem;
-  }
-
   .work .work_reverse {
     display: block;
   }
@@ -1024,7 +1022,7 @@ th {
     padding: 0 1rem;
   }
   .bantu-vibe h1 {
-    padding-left: 1rem;
+    padding: 1rem;
   }
   /*------------------- footer -------------------*/
   .footer .box-container,
@@ -1097,18 +1095,16 @@ th {
   }
 }
 
-.grid {
-  display: grid;
-}
-
 @media only screen and (min-width: 500px) {
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
-@media only screen and (min-width: 800px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+@media only screen and (max-width: 800px) {
+  .home{
+    display: flex;
+    flex-direction: column-reverse;
+     padding-top: 4rem;
   }
 }
