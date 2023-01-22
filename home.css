@@ -65,8 +65,9 @@ img {
 }
 
 .slider2 {
+  width: 100vw;
   height: 100vh;
-  overflow: hidden;
+    overflow: hidden;
   background-color: var(--slider1);
 }
 
@@ -79,7 +80,9 @@ img {
 }
 
 .slider4 {
-  background: radial-gradient(rgb(255, 251, 251), var(--slider4));
+  width: 100vw;
+  height: 100vh;
+   background: radial-gradient(rgb(255, 251, 251), var(--slider4));
 }
 
 .slideshow-container {
