@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+
+:root {
+  --bangerColor: #4b1023;
+  --bgBangers1: #fec5e8;
+  --bgBangers2: #e185b4;
+  --slider1: #e1cca1;
+  --slider3: #9bbcdf;
+  --slider4: #1f0c08;
+  --Bangers: "Bangers", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  /* overflow-x: hidden; */
+}
+
+h1 {
+  font-size: 4rem;
+  color: var(--bangerColor);
+  font-family: var(--Bangers);
+}
+
+.slider1 {
+  height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  /* background: rgb(254, 197, 232); */
+  background: radial-gradient(
+    circle,
+    var(--bgBangers1) 0%,
+    var(--bgBangers2) 100% 100%
+  );
+}
+
+.blur {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: RGBA(255, 255, 255, 0.3);
+  backdrop-filter: blur(10rem);
+}
+
+img {
+  height: 100%;
+  
+}
+
+.section {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider2 {
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--slider1);
+}
+
+.slider2 .section img {
+  margin-bottom: -4rem;
+  border: 1px solid red;
+}
+
+.slider3 {
+    background: radial-gradient(rgb(105, 143, 226), var(--slider3));
+/* background-color: var(--slider3); */
+}
+
+.slider4 {
+  background: radial-gradient(rgb(255, 251, 251), var(--slider4));
+}
