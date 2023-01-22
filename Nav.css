@@ -193,7 +193,7 @@
   cursor: pointer;
 }
 
-.nav-menu {
+.nav-menu {width: 100%;
   margin-top:-6rem;
     display: flex;
   flex-direction: column;
@@ -403,7 +403,11 @@ h3 {
   width: 1.8rem;
 }
 @media screen and (max-width: 736px) {
-  .nav-links .main_sec {
+ 
+.navbar {
+  padding: 2rem 1rem;
+}
+ .nav-links .main_sec {
     padding: 0 0 0 2rem;
     height: 60vh;
   }
