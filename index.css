@@ -7,6 +7,12 @@
   --light-white: rgba(235, 227, 227, 0.723);
   --dark-bg: rgba(237, 234, 234, 0.599);
   --bg: black;
+  --cardColor:rgb(55, 54, 54);
+  --border:solid 1px rgba(241, 241, 241, 0.3);
+  --circleEvent:rgba(61, 61, 61, 0.425);
+  --Bangers:"Bangers", cursive;
+  --aspect:3/4;
+  --Gold:gold;
 }
 
 * {
@@ -18,8 +24,7 @@
 }
 
 hr {
-  border: 0;
-  border-bottom: solid 1px rgba(241, 241, 241, 0.3);
+  border-bottom: var(--border);
   margin: 1em 0;
 }
 p {
@@ -27,8 +32,6 @@ p {
 }
 body {
   background-color: var(--bg);
-  margin: 0;
-  padding: 0;
   color: var(--light-black);
   font-size: 17pt;
   font-weight: 500;
@@ -37,22 +40,19 @@ body {
 
 .bantu-vibe h1 {
   font-size: clamp(1rem, 10vw, 4rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--Bangers);
   color: var(--white);
   padding-left: 7rem;
 }
 
 /* Home designs with the cool bantu vibes */
-.home  {
+.home {
   color: var(--white);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .home-body {
-  /* border: 1px solid red; */
-  /* margin-top: -10rem; */
-  /* padding-top: 8rem; */
   height: 100vh;
   background-image: url(assets/Frame\ 7.jpg);
   background-position: center;
@@ -65,7 +65,6 @@ body {
   font-weight: 500;
   width: 70%;
   margin: 0 10rem 0 0;
-  /* border: 1px solid red; */
   flex-direction: column;
   display: flex;
   justify-content: center;
@@ -74,28 +73,16 @@ body {
 .right ul {
   display: flex;
   justify-content: space-between;
- width: 80%;
+  width: 80%;
   align-items: center;
   font-size: clamp(1rem, 1.4rem, 1.8rem);
   color: var(--dark-bg);
 }
-/* 
-.right ul {
-  display: flex;
-  justify-content: space-between;
- width: 50%;
-  align-items: center;
-font-size: 1rem;
-  color: var(--dark-bg);
-} */
-
 .image {
-  aspect-ratio: 3/4;
+  aspect-ratio: var(--aspect);
   padding: 10rem 0 0 18rem;
   height: 100vh;
   align-items: baseline;
-  /* border: 1px solid red; */
-  
 }
 
 .home .image img {
@@ -110,12 +97,11 @@ font-size: 1rem;
 
 .cx {
   width: 100%;
-  
 }
 
 .home h1 {
   font-size: clamp(6rem, 16vw, 12rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--Bangers);
 }
 .blog {
   padding: clamp(3rem, 10vw, 4rem);
@@ -134,7 +120,9 @@ font-size: 1rem;
   font-weight: bolder;
   list-style: none;
 }
-
+.link li img {
+  width: 1.8rem;
+}
 .link a {
   margin: 0 1rem;
 }
@@ -146,23 +134,22 @@ font-size: 1rem;
 .flyers,
 .flyer2 {
   position: sticky;
-  /* border: 1px solid white; */
   top: 3rem;
   z-index: -1;
-  font-family: "Bangers", cursive;
+  font-family: var(--Bangers);
   width: 80%;
   padding-left: 8rem;
 }
 
 .flyers h1 {
-  color: rgb(55, 54, 54);
+  color: var(--cardColor);
   font-size: clamp(4rem, 60vw, 15rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--Bangers);
 }
 .flyer2 h1 {
-  color: rgb(55, 54, 54);
+  color: var(--cardColor);
   font-size: clamp(3rem, 30vw, 10rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--Bangers);
 }
 
 .youtube_container {
@@ -177,12 +164,10 @@ font-size: 1rem;
 /* --------------------about-------------------- */
 .wrap {
   position: relative;
-  /* border: 1px solid yellow; */
   padding: 8rem 0;
 }
 
 .about {
-  /* border: 1px solid red; */
   padding: 0 8rem;
   overflow: hidden;
   margin: -5rem 0 0 0;
@@ -190,18 +175,17 @@ font-size: 1rem;
 
 .bantu-vibe_about h1 {
   font-size: clamp(2rem, 6vw, 3rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--Bangers);
 }
 
 .bantu-vibe_about h1 span {
   font-size: clamp(1rem, 6vw, 3rem);
-  font-family: "Bangers", cursive;
-  color: rgb(55, 54, 54);
+  font-family: var(--Bangers);
+  color: var(--cardColor);
 }
 
 .about .flex-items .right {
   width: 50%;
-  /* border: 1px solid white; */
 }
 
 .about .flex-items {
@@ -216,7 +200,7 @@ font-size: 1rem;
 }
 
 .about .flex-items p {
-  font-size: 18px;
+  font-size: 1.2rem;
   line-height: 1.4;
   padding: 1rem 0 0 0;
 }
@@ -226,13 +210,12 @@ font-size: 1rem;
   overflow: hidden;
   margin: 2.5rem 0 0 0;
   margin-top: 2rem;
-  aspect-ratio: 3/4;
+  aspect-ratio: var(--aspect);
 }
 
 .frame_album {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4/4;
   padding: 2rem 0 0 6rem;
 }
 
@@ -243,10 +226,9 @@ font-size: 1rem;
 
 .about .frame_about {
   overflow: hidden;
-  /* height: 330px; */
   width: 100%;
   margin-top: 1rem;
-  aspect-ratio: 3/4;
+  aspect-ratio: var(--aspect);
 }
 
 .frame img,
@@ -264,7 +246,6 @@ font-size: 1rem;
   padding: 8rem;
   height: 100%;
   overflow: hidden;
-  /* margin-top: -10rem; */
 }
 
 .work .work_reverse {
@@ -272,12 +253,7 @@ font-size: 1rem;
   justify-content: space-between;
 }
 
-/* .work_reverse .left {
-  width:50%;
-} */
-
 .work p {
-  font-size: 18px;
   line-height: 1.4;
   padding: 1rem 0 0 0;
 }
@@ -288,12 +264,12 @@ font-size: 1rem;
 }
 
 .work .left .frame_work {
-  aspect-ratio: 3/4;
+  aspect-ratio: var(--aspect);
   margin-bottom: -2rem;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: gold;
+  background-color: var(--Gold);
 }
 .contact {
   display: flex;
@@ -343,11 +319,15 @@ form .link-btn {
   overflow: hidden;
   padding: 0 8rem;
 }
-.projects .flex-items li{max-width: 100%;
-width: 33%;
-  border: 1px solid red;}
+.projects .flex-items li {
+  max-width: 100%;
+  width: 33%;
+ 
+}
 
-  .projects .flex-items li img{width: 100%;}
+.projects .flex-items li img {
+  width: 100%;
+}
 .Ideas {
   width: 100%;
   margin-top: -10rem;
@@ -359,8 +339,10 @@ width: 33%;
   align-items: center;
   margin-left: 30%;
 }
-.Ideas .flex a{color: var(--white);
-margin: 0 .2rem;}
+.Ideas .flex a {
+  color: var(--white);
+  margin: 0 0.2rem;
+}
 .let {
   margin-right: 2rem;
 }
@@ -379,18 +361,16 @@ margin: 0 .2rem;}
 li.up {
   padding: 0;
   height: 50%;
-  /* padding: 2rem; */
-  /* border: 1px solid red; */
-  }li.up img {
-    padding: 0;
-    height: 50%;
-    /* border: 1px solid red; */
-    }
+}
+li.up img {
+  padding: 0;
+  height: 50%;
+}
 
 /* ------------------.Ideas------------------ */
 
 .Ideas img {
-  width: 200px;
+  width: 12.5rem;
 }
 
 table {
@@ -414,16 +394,15 @@ td,
 th {
   text-align: center;
   justify-content: center;
-  padding: 1px;
   width: 20%;
   text-align: left;
-  border-bottom: solid 1px rgba(241, 241, 241, 0.3);
+  border-bottom: var(--border);
 }
 
 /* ------------------about page------------------ */
 .about_items {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
   padding: 0 6rem;
 }
 
@@ -466,13 +445,7 @@ th {
 .browse {
   padding: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.browse li img {
-  object-fit: fill;
-  -o-object-fit: fill;
-  width: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
 }
 
 .button {
@@ -481,19 +454,19 @@ th {
   display: inline-block;
   justify-content: center;
   text-align: center;
-  margin: 0 20px;
+  margin: 0 1.2rem;
 }
 
 .button a {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--);
   color: var(--bg);
 }
 .button_1 {
   background-color: var(--white);
   text-align: center;
   display: inline-block;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 2rem;
   justify-content: center;
   text-align: center;
@@ -501,7 +474,7 @@ th {
 
 .button_1 a {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--);
   color: var(--bg);
 }
 
@@ -530,7 +503,7 @@ th {
   width: 30vw;
   height: 100%;
   margin: 2rem;
-  background-color: rgb(55, 54, 54);
+  background-color: var(--cardColor);
   overflow-y: hidden;
   display: flex;
   flex-direction: column;
@@ -552,7 +525,7 @@ th {
 
 .event-vibe_about h1 {
   font-size: clamp(1rem, 5vw, 2rem);
-  font-family: "Bangers", cursive;
+  font-family: var(--Bangers);
 }
 
 .event_items_top p {
@@ -579,7 +552,6 @@ th {
 }
 
 .track_box_items {
-  aspect-ratio: 4/4;
   padding: 0 0 0 0rem;
   padding: 3rem;
 }
@@ -590,7 +562,7 @@ th {
 
 .track_box section {
   overflow: hidden;
-  background-color: gold;
+  background-color:var(--Gold);
   height: 100%;
 }
 
@@ -663,7 +635,7 @@ th {
 
 .flex_logo {
   display: flex;
-  width: 220px;
+  width: 21.2rem;
 }
 
 .footer .box-container {
@@ -708,7 +680,7 @@ th {
 }
 
 .vibe .fab {
-  font-size: 24px;
+  font-size: 1.2rem;
   color: var(--white);
 }
 
@@ -724,56 +696,37 @@ th {
   font-weight: 900;
   margin-left: 1rem;
 }
-
-
-@media screen and (max-width: 1280px) {
-  body,
-  input,
-  select,
-  textarea {
-    font-size: 12pt;
-  }
-}
-
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 896px) {
   /* -----------------------.home----------------------- */
   .wrap {
     position: relative;
-    /* border: 1px solid yellow; */
     padding: 3rem 0;
   }
 
   .space {
     margin: 1rem;
   }
-  /* .home-body{height: 100%;} */
-.home{
-  display: flex;
-  flex-direction: column-reverse;
-   padding-top: 4rem;
-}
-  /* .home .right {
-    width: 100%;
-    margin:  0;
+  .home {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 4rem;
   }
-   */
-.cx h1 {
-  font-size: clamp(7rem, 20vw, 14rem);
-text-align: center;  font-family: "Bangers", cursive;
-}
+  .cx h1 {
+    font-size: clamp(7rem, 20vw, 14rem);
+    text-align: center;
+  }
   .image {
     height: 30rem;
-  padding: 0;
+    padding: 0;
   }
-.image img{
-  height: 100%;
-  object-fit: contain;
-}
+  .image img {
+    height: 100%;
+    object-fit: contain;
+  }
   .big_circle_event {
     top: -0.5em;
     right: -0.3rem;
-    border: 1px solid rgb(110, 109, 109);
-    background-color: rgba(61, 61, 61, 0.425);
+    background-color: var(--circleEvent);
   }
 
   .home .flex-items {
@@ -791,7 +744,6 @@ text-align: center;  font-family: "Bangers", cursive;
   }
 
   .youtube_container {
-    /* height: 50vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -815,14 +767,13 @@ text-align: center;  font-family: "Bangers", cursive;
     /* height: 100%; */
   }
 
-.home li {  
-  margin: 1rem 1.5rem;
-}
-
-  .home li img{
-    width: 30px;
+  .home li {
+    margin: 1rem 1.5rem;
   }
-  /* .about .flex-items .left{ display: flex; flex-wrap: wrap-reverse;} */
+
+  .home li img {
+    width: 1.4rem;
+  }
   .about .flex-items {
     display: block;
   }
@@ -848,20 +799,14 @@ text-align: center;  font-family: "Bangers", cursive;
     margin: 0;
     height: 100%;
     overflow: hidden;
-    aspect-ratio: 3/4;
+    aspect-ratio: var(--aspect);
   }
 
   .work_reverse .left .frame_work img {
     width: 100%;
     margin: 0;
   }
-
-  .bantu_vibe_work img {
-    width: 100%;
-  }
-
   .Ideas {
-    /* height: 100%; */
     margin-top: 0;
   }
 
@@ -885,7 +830,7 @@ text-align: center;  font-family: "Bangers", cursive;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
   }
 
   .work_reverse .right {
@@ -896,7 +841,7 @@ text-align: center;  font-family: "Bangers", cursive;
   /* -----------------.songs----------------- */
 
   .song_table img {
-    width: 15px;
+    width: 1rem;
   }
 
   /* --------------------about page-------------------- */
@@ -923,7 +868,7 @@ text-align: center;  font-family: "Bangers", cursive;
     height: 50vh;
   }
   .track_box {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     padding: 0 1rem;
   }
 
@@ -964,13 +909,13 @@ text-align: center;  font-family: "Bangers", cursive;
   .main1 .event_items {
     width: 100%;
     height: 100%;
-    background-color: rgb(55, 54, 54);
+    background-color: var(--cardColor);
   }
   .main1 .event_items img {
     width: 100%;
     object-fit: contain;
     height: 100%;
-    background-color: rgb(55, 54, 54);
+    background-color: var(--cardColor);
   }
 
   .Events {
@@ -987,7 +932,7 @@ text-align: center;  font-family: "Bangers", cursive;
 
   .event_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 1rem;
     padding: 0 1rem;
   }
@@ -1005,7 +950,7 @@ text-align: center;  font-family: "Bangers", cursive;
 
   .track_container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
     gap: 1rem;
     padding: 0 1rem;
   }
@@ -1057,11 +1002,8 @@ text-align: center;  font-family: "Bangers", cursive;
 
   .footer .flex_items .footer_right {
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     margin-top: 2rem;
-    font-size: 25px;
+    font-size: 1.5rem;
     font-size: 550;
     line-height: 1.65;
   }
@@ -1072,7 +1014,7 @@ text-align: center;  font-family: "Bangers", cursive;
 
   .button {
     background-color: var(--light-white);
-    padding: 5px 10px;
+    padding: .2rem 0.6rem;
     margin: 1rem 0;
     display: inline-block;
   }
@@ -1081,7 +1023,8 @@ text-align: center;  font-family: "Bangers", cursive;
     padding: 1rem;
     height: 100%;
   }
-  form {margin-top: 2rem;
+  form {
+    margin-top: 2rem;
     width: 100%;
   }
 }
@@ -1092,19 +1035,5 @@ text-align: center;  font-family: "Bangers", cursive;
   select,
   textarea {
     font-size: 11pt;
-  }
-}
-
-@media only screen and (min-width: 500px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .home{
-    display: flex;
-    flex-direction: column-reverse;
-     padding-top: 4rem;
   }
 }

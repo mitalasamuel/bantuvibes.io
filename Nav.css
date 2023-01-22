@@ -7,7 +7,7 @@
 
 .navbar {
   padding: 2rem 6rem;
-position: fixed;
+  position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
@@ -178,7 +178,7 @@ position: fixed;
 }
 
 .nav-links .main_sec a {
-  font-size: clamp(1rem, 10vw, 3rem);
+  font-size: clamp(2rem, 10vw, 4rem);
   font-family: "Bangers", cursive;
   color: white;
 }
@@ -189,13 +189,13 @@ position: fixed;
 
 .navbar .menu-hamburger {
   display: block;
-  font-size: 25px;
+  font-size: 2rem;
   cursor: pointer;
 }
 
 .nav-menu {
-  margin-top: clamp(-6rem, 10vw, -4rem);
-  display: flex;
+  margin-top:-9rem;
+    display: flex;
   flex-direction: column;
 }
 
@@ -244,11 +244,13 @@ position: fixed;
 .photo_nav ul li img {
   aspect-ratio: 3/4;
 }
-.music .flex-items{
+.music .flex-items {
   padding: 0 8rem;
 }
-.order1{display: block;
-width: 50%;}
+.order1 {
+  display: block;
+  width: 50%;
+}
 .order {
   position: relative;
   width: 50%;
@@ -257,35 +259,40 @@ width: 50%;}
 }
 .order_4 {
   transform: rotate(-15deg);
-    position: absolute;
-    aspect-ratio: 3/4;
-    z-index: 1;
-  }.order_3 {
-    z-index: 2;
-    height: 90%;
-    margin-top: 5rem;
-    position: relative;
-    transform: rotate(-20deg);
-    }
-    .order_1 img, .order_2 img, .order_3 img, .order_4 img {
-      height: clamp(20rem,50vw,25rem);
-      aspect-ratio: 3/4;
-      width: clamp(10rem,50vw,20rem);
-      }
-      .order_2 img{
-      z-index: 3;
-      margin-left: 6rem;
-      margin-top: -5rem;
-      transform: rotate(10deg);
-      position: absolute;
-        aspect-ratio: 3/4;
-      }.order_1 {
-        transform: rotate(40deg);
-        z-index: 4;
-        position: absolute;
-          margin-left: 14rem;
-          aspect-ratio: 3/4;
-        }
+  position: absolute;
+  aspect-ratio: 3/4;
+  z-index: 1;
+}
+.order_3 {
+  z-index: 2;
+  height: 90%;
+  margin-top: 5rem;
+  position: relative;
+  transform: rotate(-20deg);
+}
+.order_1 img,
+.order_2 img,
+.order_3 img,
+.order_4 img {
+  height: clamp(20rem, 50vw, 25rem);
+  aspect-ratio: 3/4;
+  width: clamp(10rem, 50vw, 20rem);
+}
+.order_2 img {
+  z-index: 3;
+  margin-left: 6rem;
+  margin-top: -5rem;
+  transform: rotate(10deg);
+  position: absolute;
+  aspect-ratio: 3/4;
+}
+.order_1 {
+  transform: rotate(40deg);
+  z-index: 4;
+  position: absolute;
+  margin-left: 14rem;
+  aspect-ratio: 3/4;
+}
 li.order1 img {
   height: 100%;
   position: relative;
@@ -329,9 +336,10 @@ li.order4 img {
 .footer_nav {
   position: relative;
   padding: 0 3rem;
+  margin: 4rem 0 0 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  gap: 2rem;
+  font-size: 0.9rem;
 }
 
 .flex_items,
@@ -344,6 +352,7 @@ li.order4 img {
 }
 
 h3 {
+  font-size: 1rem;
   padding-bottom: 1rem;
 }
 
@@ -352,7 +361,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
-  width: 60%;
+  width: 40%;
 }
 
 .center_nav ul {
@@ -360,7 +369,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   font-size: 1.5rem;
-  width: 50%;
+  width: 20%;
 }
 
 .end_nav p,
@@ -387,10 +396,12 @@ h3 {
   height: 100vh;
 }
 
-.navbar .nav-links ul li {
+.navbar .nav-links ul  {
   font-size: 1.2em;
 }
-
+.navbar .nav-links .footer_nav ul img {
+  width: 1.8rem;
+}
 @media screen and (max-width: 736px) {
   .nav-links .main_sec {
     padding: 0 0 0 2rem;
@@ -413,41 +424,49 @@ h3 {
     right: 0;
     top: 20%;
     left: 70%;
-  }.music .flex-items{
+  }
+  .music .flex-items {
     padding: 1rem;
     display: block;
   }
-  .order1{display: block;
-  width: 100%;
+  .order1 {
+    display: block;
+    width: 100%;
     position: relative;
     width: 100%;
-    height: 100%;margin-bottom: 6rem;
+    height: 100%;
+    margin-bottom: 6rem;
   }
   .order_4 {
     margin-top: 5rem;
     transform: rotate(15deg);
-    }.order_3 {
-      height: 90%;
-      margin-top: 6rem;
-      position: relative;
-      transform: rotate(-20deg);
-      }
-      .order_1 img, .order_2 img, .order_3 img, .order_4 img {
-        height: clamp(10rem,50vw,25rem);
-        aspect-ratio: 3/4;
-        width: clamp(1rem,50vw,10rem);
-        }
-      .order_2 {
-        z-index: 3;
-        margin-left: 6rem;
-        margin-top: 5rem;
-        transform: rotate(10deg);
-        position: absolute;
-          aspect-ratio: 3/4;
-        }.order_1 {
-          margin-top: 10rem;
-          position: absolute;
-            margin-left: 10em;
-            aspect-ratio: 3/4;
-          }
+  }
+  .order_3 {
+    height: 90%;
+    margin-top: 6rem;
+    position: relative;
+    transform: rotate(-20deg);
+  }
+  .order_1 img,
+  .order_2 img,
+  .order_3 img,
+  .order_4 img {
+    height: clamp(10rem, 50vw, 25rem);
+    aspect-ratio: 3/4;
+    width: clamp(1rem, 50vw, 10rem);
+  }
+  .order_2 {
+    z-index: 3;
+    margin-left: 6rem;
+    margin-top: 5rem;
+    transform: rotate(10deg);
+    position: absolute;
+    aspect-ratio: 3/4;
+  }
+  .order_1 {
+    margin-top: 10rem;
+    position: absolute;
+    margin-left: 10em;
+    aspect-ratio: 3/4;
+  }
 }
