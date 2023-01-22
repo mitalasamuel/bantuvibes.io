@@ -60,7 +60,7 @@
   border-radius: 50%;
   position: absolute;
   right: 4.4rem;
-  top: 50%;
+  top: 30%;
   left: 60%;
   border: 1px solid rgb(110, 109, 109);
   background-color: rgba(61, 61, 61, 0.425);
@@ -80,7 +80,7 @@
   border-radius: 50%;
   position: absolute;
   right: 4.4rem;
-  top: 40%;
+  top: 12%;
   left: 80%;
   border: 1px solid rgb(110, 109, 109);
   background-color: rgba(61, 61, 61, 0.425);
@@ -178,7 +178,7 @@
 }
 
 .nav-links .main_sec a {
-  font-size: clamp(2rem, 10vw, 4rem);
+  font-size: clamp(2rem, 20vw, 4rem);
   font-family: "Bangers", cursive;
   color: white;
 }
@@ -194,7 +194,7 @@
 }
 
 .nav-menu {
-  margin-top:-9rem;
+  margin-top:-6rem;
     display: flex;
   flex-direction: column;
 }
@@ -415,12 +415,14 @@ h3 {
     display: none;
   }
 
-  .small_circle2 {
+  .small_circle2, .small_circle1{
     right: 0;
     top: 10%;
     left: 40%;
+    display: none;
   }
   .small_circle3 {
+    display: none;
     right: 0;
     top: 20%;
     left: 70%;
@@ -428,6 +430,9 @@ h3 {
   .music .flex-items {
     padding: 1rem;
     display: block;
+  }
+  .footer_nav {
+    display: none;
   }
   .order1 {
     display: block;

@@ -5,7 +5,7 @@
   --white: rgb(250, 246, 246);
   --light-black: rgb(179, 175, 175);
   --light-white: rgba(235, 227, 227, 0.723);
-  --dark-bg: rgba(237, 234, 234, 0.599);
+  --dark-bg: rgba(242, 240, 240, 0.599);
   --bg: black;
   --cardColor:rgb(55, 54, 54);
   --border:solid 1px rgba(241, 241, 241, 0.3);
@@ -33,7 +33,7 @@ p {
 body {
   background-color: var(--bg);
   color: var(--light-black);
-  font-size: 17pt;
+  font-size: 1.4rem;
   font-weight: 500;
   line-height: 1.3;
 }
@@ -75,7 +75,6 @@ body {
   justify-content: space-between;
   width: 80%;
   align-items: center;
-  font-size: clamp(1rem, 1.4rem, 1.8rem);
   color: var(--dark-bg);
 }
 .image {
@@ -111,7 +110,6 @@ body {
 }
 
 .link {
-  padding-top: 2rem;
   display: flex;
   max-width: 100%;
 }
@@ -166,7 +164,10 @@ body {
   position: relative;
   padding: 8rem 0;
 }
-
+.wrap h2{
+  font-size: 2rem;
+  padding-bottom: .6rem;
+}
 .about {
   padding: 0 8rem;
   overflow: hidden;
@@ -326,7 +327,9 @@ form .link-btn {
 }
 
 .projects .flex-items li img {
+  margin: 0 1rem;
   width: 100%;
+  border: 1px solid red;
 }
 .Ideas {
   width: 100%;
@@ -451,15 +454,14 @@ th {
 .button {
   background-color: var(--light-white);
   text-align: center;
-  display: inline-block;
   justify-content: center;
-  text-align: center;
-  margin: 0 1.2rem;
+display: flex;
+justify-content: center;
 }
 
 .button a {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  font-family: var(--);
+  font-family: var(--Bangers);
   color: var(--bg);
 }
 .button_1 {
@@ -474,7 +476,7 @@ th {
 
 .button_1 a {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  font-family: var(--);
+  font-family: var(--Bangers);
   color: var(--bg);
 }
 
@@ -500,6 +502,7 @@ th {
 }
 
 .main .event_items {
+  font-size: 1.2rem;
   width: 30vw;
   height: 100%;
   margin: 2rem;
@@ -516,7 +519,9 @@ th {
   z-index: 1000;
   width: 50%;
 }
-
+.place{
+  font-size: .9rem;
+}
 .event_items_top {
   margin-top: -8rem;
   padding: 0 6rem;
@@ -697,7 +702,9 @@ th {
   margin-left: 1rem;
 }
 @media screen and (max-width: 896px) {
-  /* -----------------------.home----------------------- */
+  body{
+    font-size: 1.2rem;
+  }/* -----------------------.home----------------------- */
   .wrap {
     position: relative;
     padding: 3rem 0;
@@ -947,7 +954,9 @@ th {
   .event_items_top img {
     width: 70%;
   }
-
+  .wrap h2{
+    font-size: 1.4rem;
+  }
   .track_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
