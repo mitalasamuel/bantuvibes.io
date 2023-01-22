@@ -140,7 +140,7 @@ img {
   transition: background-color .6s ease
 }
 
-.active,
+.slideshow-container .active,
 .dot:hover {
   background-color: #717171
 }
