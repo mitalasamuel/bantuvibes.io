@@ -1,71 +1,69 @@
-const data = [
-		{
-		id: 0,
-		// place: 'Golden Gate Bridge',
-		// country: 'California, USA',
-		info: 'CXNRVD',
-		image:
-			'https://mitalasamuel.github.io/bantuvibes.io/assets/My%20project-3.png',
-	},
+var slideIndex = 1;
 
-	{
-		id: 1,
-		// place: 'Hagia Sophia Mosque',
-		// country: 'Istanbul, Turkey',
-		info: 'RIDYM',
-		image:
-			'https://mitalasamuel.github.io/bantuvibes.io/assets/My%20project-4.png',
-	},
-	{
-		id: 2,
-		// place: 'Eiffel Tower',
-		// country: 'Paris, France',
-		info: 'KOHEN JAYCEE',
-		image:
-			'https://mitalasamuel.github.io/bantuvibes.io/assets/My%20project-2.png',
-	},
-	{
-		id: 3,
-		// place: 'Taj Mahal',
-		// country: 'Agra, India',
-		info: "DENESI",
-		image:
-			'https://mitalasamuel.github.io/bantuvibes.io/assets/My%20project-5%202.png',
-	},
-];
+var myTimer;
 
-const imageSlider = document.querySelector('.is__container');
-const prevBtn = document.querySelector('.arrow__left');
-const nextBtn = document.querySelector('.arrow__right');
+var slideshowContainer;
 
-let i = 0;
-let x = data.length;
+window.addEventListener("load",function() {
+    showSlides(slideIndex);
+    myTimer = setInterval(function(){plusSlides(1)}, 4000);
+  
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+  
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+  
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+})
 
-const displaySlides = () => {
-	imageSlider.innerHTML = `
-        <div class="is__container">
-            <div class="is__image">
-                <img
-                    src=${data[i].image}
-                    alt=""
-                />
-            </div>
-            <div class="is__content">
-                <p>
-                ${data[i].info}
-                </p>
-            </div>
-        </div>
-    `;
-};
-window.onload = displaySlides;
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+   showSlides(slideIndex += 1); 
+  }
+  
+  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+  
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  }
+}
 
-nextBtn.addEventListener('click', () => {
-	i = (x + i + 1) % x;
-	displaySlides();
-});
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  showSlides(slideIndex = n);
+}
 
-prevBtn.addEventListener('click', () => {
-	i = (x + i - 1) % x;
-	displaySlides();
-});
+function showSlides(n){
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+pause = () => {
+  clearInterval(myTimer);
+}
+
+resume = () =>{
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
+}
